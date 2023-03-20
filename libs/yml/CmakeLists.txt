@@ -1,0 +1,14 @@
+cmake_minimum_required(VERSION 3.8)
+project(ymlLib)
+
+set(LIBRARY_OUTPUT_PATH "../bin")
+
+set(c4core_DIR c:/dev/vcpkg/packages/c4core_x64-windows/share/c4core)
+set(ryml_DIR c:/dev/vcpkg/packages/ryml_x64-windows/share/ryml)
+set(SRC_YML src/Yml.cpp)
+
+find_package(ryml CONFIG REQUIRED)
+
+add_library(yml STATIC ${SRC_YML})
+target_link_libraries(yml ryml::ryml)
+target_include_directories(yml PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)

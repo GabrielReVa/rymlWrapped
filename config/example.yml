@@ -1,0 +1,9 @@
+data_1: 10
+data_2: 3.14
+data_3: true
+data_4: hi!
+tree_1:
+  subdata_1: 11
+  subdata_2: 0
+  subdata_3: 0.8
+  subdata_4: bye
